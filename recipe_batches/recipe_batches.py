@@ -11,8 +11,8 @@ def recipe_batches(recipe, ingredients):
     # runtime O(n); space O(n)
     # UPDATE: runtime O(n); space O(c)
     min_batch = None
-    for ingredient in recipe.keys():
-        if ingredient in ingredients.keys():
+    for ingredient in recipe:
+        if ingredient in ingredients:
             current_batch = ingredients[ingredient] // recipe[ingredient]
             if min_batch is None:
                 min_batch = current_batch
