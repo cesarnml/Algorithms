@@ -16,6 +16,7 @@ def rock_paper_scissors(n):
         for option in options:
             play = play + [option]
             if i == n:
+                # done playing append plays to outcomes
                 outcomes.append(play)
             else:
                 helper(play, i + 1)
