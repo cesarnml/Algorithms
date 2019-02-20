@@ -5,16 +5,22 @@ import math
 
 def recipe_batches(recipe, ingredients):
     # Loop through keys in recipe
-    # Calculate ingredients[key] // recipe[key] and store result in a batch list
+    # Calculate ingredients[key] // recipe[key] and store result in a batch list (UPDATE)
+    # UPDATE: refactored to keep track of min_batch in-place without using a storage list
     # min(list) = max number of batches since max_batch dictated my limiting ingredient
     # runtime O(n); space O(n)
-    batch = []
+    # UPDATE: runtime O(n); space O(c)
+    min_batch = None
     for ingredient in recipe.keys():
         if ingredient in ingredients.keys():
-            batch.append(ingredients[ingredient] // recipe[ingredient])
+            current_batch = ingredients[ingredient] // recipe[ingredient]
+            if min_batch is None:
+                min_batch = current_batch
+            else:
+                min_batch = min(current_batch, min_batch)
         else:
             return 0  # missing necessary ingredient
-    return min(batch)
+    return min_batch
 
 
 recipe_batches({'milk': 100, 'butter': 50, 'cheese': 10},

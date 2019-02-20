@@ -9,7 +9,7 @@ def find_max_profit(prices):
     # Initialize min_price to first element; max_profit = 0 (UPDATE)
     # Looks like the testing code forces you to take a loss if no profit possible
     # So now initializing max_profit = prices[1] - prices[0]
-    # runtime O(n); space O(1)
+    # runtime O(n); space O(c)
     min_price = prices[0]
     max_profit = prices[1] - prices[0]
     for price in prices[1:]:
