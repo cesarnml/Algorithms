@@ -2,7 +2,7 @@
 
 import sys
 
-# runtime O(n) due to needs to loop through n rounds; space O(n) due to recursive stack
+# runtime O(n) due to looping through n rounds; space O(n) due to recursive stack
 
 
 def rock_paper_scissors(n):
