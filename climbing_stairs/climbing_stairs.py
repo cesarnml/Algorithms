@@ -6,7 +6,7 @@ import sys
 # Analogues solution to recursive Fibonacci sequence with memoization implementation
 # runtime O(?) definitely better than O(2^n) ... probably O(n)
 # space O(n) [due to memoization hash] + stack-size ... ?
-
+# According to Stackoverflow ... probably O(n) in both space and time
 
 def climbing_stairs(n, cache={}):
     if n <= 0:
