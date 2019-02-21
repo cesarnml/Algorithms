@@ -3,7 +3,8 @@
 import sys
 
 def making_change(amount, denominations):
-  pass 
+  cache = {}
+# need to think about this more ... stopping place for day 1
 
 
 if __name__ == "__main__":
